@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <label for="">Enter number:</label>
+    <input type="text" id="givenNumber">   
+    <input type="button" value="submit" id="submit" onclick= "fibo()"> 
+    </form>
+    <p id="result"></p>
+
+
+    <script type="text/javascript">
+            function fibo(){
+                let givenNumber = document.getElementById('givenNumber').value;
+              //  console.log(givenNumber);
+              let  num1=0;
+              let   num2=1;
+              for (let i=2; i <= givenNumber ; i++) { 
+                sum = num1+num2;
+                num1=num2;
+                num2=sum;
+              }
+              document.getElementById('result').innerHTML=sum;;
+
+            }
+     
+        
+    </script>
+</body>
+</html>
